@@ -27,9 +27,12 @@ const EmojiTray = () => {
         />
         {chosenEmoji && (
           <div>
-            {searchEmoji[chosenEmoji]
-              ? "This emoji represents " + searchEmoji[chosenEmoji].name + "."
-              : "This emoji is not available in the current collection."}
+            <span className="emoticon-display">{chosenEmoji}</span>
+            <div>
+              {searchEmoji[chosenEmoji]
+                ? "This emoji represents " + searchEmoji[chosenEmoji].name + "."
+                : "This emoji is not available in the current collection."}
+            </div>
           </div>
         )}
         <EmojiPick setChosenEmoji={setChosenEmoji} />
