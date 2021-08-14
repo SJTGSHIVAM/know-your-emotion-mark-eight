@@ -18,7 +18,9 @@ const EmojiPick = ({
             return (
               <>
                 <span
-                  className="icon-tile"
+                  className={
+                    "icon-tile " + (selectedTray == i ? "highlight" : "")
+                  }
                   onClick={() => {
                     setSelectedTray(i);
                   }}
