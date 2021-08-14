@@ -1,8 +1,8 @@
 import EmojiPicker from "emoji-picker-react";
 import { useState } from "react";
-import "./BdayPal.css";
+import "./EmojiTray.css";
 
-const BdayPal = () => {
+const EmojiTray = () => {
   const [chosenEmoji, setChosenEmoji] = useState<any>(null);
 
   const onEmojiClick = (event: any, emojiObject: any) => {
@@ -35,4 +35,4 @@ const BdayPal = () => {
     </>
   );
 };
-export default BdayPal;
+export default EmojiTray;

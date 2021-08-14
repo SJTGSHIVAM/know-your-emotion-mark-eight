@@ -4,7 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import About from "./components/About";
-import BdayPal from "./components/BdayPal";
+import EmojiTray from "./components/EmojiTray";
 
 // https://api.giphy.com/v1/gifs/translate?s=bday&api_key=dc6zaTOxFJmzC&weirdness=1
 
@@ -14,7 +14,7 @@ function App() {
       {" "}
       <Navbar />
       <Switch>
-        <Route path="/" component={BdayPal} exact />
+        <Route path="/" component={EmojiTray} exact />
         <Route path="/about" exact component={About} />
       </Switch>
       <Footer />
