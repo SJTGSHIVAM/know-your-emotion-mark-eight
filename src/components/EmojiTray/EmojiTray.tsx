@@ -20,7 +20,7 @@ const EmojiTray = () => {
         <input
           type="text"
           onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
-            setChosenEmoji(e.target.value);
+            setChosenEmoji(e.target.value.trim());
           }}
           value={chosenEmoji}
           placeholder={" Paste a emoji here"}
@@ -28,7 +28,7 @@ const EmojiTray = () => {
         {chosenEmoji && (
           <div>
             {searchEmoji[chosenEmoji]
-              ? "This emoji represents" + searchEmoji[chosenEmoji].name + " ."
+              ? "This emoji represents " + searchEmoji[chosenEmoji].name + "."
               : "This emoji is not available in the current collection."}
           </div>
         )}

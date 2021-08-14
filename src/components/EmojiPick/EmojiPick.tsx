@@ -32,7 +32,17 @@ const EmojiPick = ({
         <div className="icon-palette">
           {data[selectedTray].map((i) => {
             //   console.log(i, i.emoji);
-            return <span className="emoticon-display"> {i.emoji} </span>;
+            return (
+              <span
+                className="emoticon-display"
+                onClick={() => {
+                  setChosenEmoji(i.emoji);
+                }}
+              >
+                {" "}
+                {i.emoji}{" "}
+              </span>
+            );
           })}
         </div>
       </div>
