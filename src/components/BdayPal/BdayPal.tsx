@@ -1,7 +1,13 @@
+import EmojiPicker from "emoji-picker-react";
 import { useState } from "react";
 import "./BdayPal.css";
 
 const BdayPal = () => {
+  const [chosenEmoji, setChosenEmoji] = useState<any>(null);
+
+  const onEmojiClick = (event: any, emojiObject: any) => {
+    setChosenEmoji(emojiObject);
+  };
   return (
     <>
       <div className="bcard">
@@ -11,11 +17,18 @@ const BdayPal = () => {
             palindrome
           </h1>
         </header>
-        <section className="instruction"></section>
-        <label>
-          <section className="label">Enter your Birth Date</section>
-          <input type="text" />
-        </label>
+        <div>
+          {chosenEmoji ? (
+            <span>You chose: {chosenEmoji.emoji}</span>
+          ) : (
+            <span>No emoji Chosen</span>
+          )}
+          <EmojiPicker
+            preload={true}
+            native={true}
+            onEmojiClick={onEmojiClick}
+          />
+        </div>
 
         <button onClick={() => {}}>CHECK</button>
       </div>
