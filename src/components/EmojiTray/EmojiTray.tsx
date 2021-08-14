@@ -2,6 +2,8 @@ import EmojiPicker from "emoji-picker-react";
 import { useState } from "react";
 import "./EmojiTray.css";
 
+// https://unpkg.com/emoji.json@13.1.0/emoji.json  potential dATA
+
 const EmojiTray = () => {
   const [chosenEmoji, setChosenEmoji] = useState<any>(null);
 
