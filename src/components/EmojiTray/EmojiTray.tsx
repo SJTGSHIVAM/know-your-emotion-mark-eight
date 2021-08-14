@@ -1,38 +1,38 @@
-import EmojiPicker from "emoji-picker-react";
+import searchEmoji from "../data/data-by-emoji";
 import { useState } from "react";
+import EmojiPick from "../EmojiPick";
 import "./EmojiTray.css";
 
 // https://unpkg.com/emoji.json@13.1.0/emoji.json  potential dATA
+//to use data
+//https://github.com/muan/unicode-emoji-json/blob/main/data-by-group.json
+//
 
 const EmojiTray = () => {
-  const [chosenEmoji, setChosenEmoji] = useState<any>(null);
+  const [chosenEmoji, setChosenEmoji] = useState("");
 
-  const onEmojiClick = (event: any, emojiObject: any) => {
-    setChosenEmoji(emojiObject);
-  };
   return (
     <>
       <div className="bcard">
         <header className="head">
-          <h1>
-            Enter your birthdate and we will tell you if your birthdate is a
-            palindrome
-          </h1>
+          <h3>Select a Emoji from below or paste a emoji in Text Filed</h3>
         </header>
-        <div>
-          {chosenEmoji ? (
-            <span>You chose: {chosenEmoji.emoji}</span>
-          ) : (
-            <span>No emoji Chosen</span>
-          )}
-          <EmojiPicker
-            preload={true}
-            native={true}
-            onEmojiClick={onEmojiClick}
-          />
-        </div>
-
-        <button onClick={() => {}}>CHECK</button>
+        <input
+          type="text"
+          onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
+            setChosenEmoji(e.target.value);
+          }}
+          value={chosenEmoji}
+          placeholder={" Paste a emoji here"}
+        />
+        {chosenEmoji && (
+          <div>
+            {searchEmoji[chosenEmoji]
+              ? "This emoji represents" + searchEmoji[chosenEmoji].name + " ."
+              : "This emoji is not available in the current collection."}
+          </div>
+        )}
+        <EmojiPick setChosenEmoji={setChosenEmoji} />
       </div>
     </>
   );

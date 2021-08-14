@@ -1,4 +1,25 @@
-export default {
+const GroupList: string[] = [
+  "Smileys & Emotion",
+  "People & Body",
+  "Animals & Nature",
+  "Food & Drink",
+  "Travel & Places",
+  "Activities",
+  "Objects",
+  "Symbols",
+  "Flags",
+];
+const data: {
+  [key: string]: {
+    emoji: string;
+    skin_tone_support: boolean;
+    name: string;
+    slug: string;
+    unicode_version: string;
+    emoji_version: string;
+    skin_tone_support_unicode_version?: string;
+  }[];
+} = {
   "Smileys & Emotion": [
     {
       emoji: "😀",
@@ -14740,3 +14761,6 @@ export default {
     },
   ],
 };
+
+export default data;
+export { GroupList };

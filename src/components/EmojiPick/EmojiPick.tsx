@@ -1,11 +1,43 @@
-import data from "../data/data-by-group";
-const EmojiPick = () => {
-  return;
-  <>
-    {data["Smileys & Emotion"].map((i) => {
-      <span className="emoticon-display">{i.emoji}</span>;
-    })}
-  </>;
+import { Dispatch, SetStateAction, useState } from "react";
+import data, { GroupList } from "../data/data-by-group";
+import "./EmojiPick.css";
+
+const EmojiPick = ({
+  setChosenEmoji,
+}: {
+  setChosenEmoji: Dispatch<SetStateAction<string>>;
+}) => {
+  const [selectedTray, setSelectedTray] = useState("Smileys & Emotion");
+  return (
+    <>
+      <div className="smallcard max-width-220">
+        <div className="icon-tray max-width-220">
+          {GroupList.map((i) => {
+            // console.log(i, data[i][0].emoji);
+            // let x = String(i);
+            return (
+              <>
+                <span
+                  className="icon-tile"
+                  onClick={() => {
+                    setSelectedTray(i);
+                  }}
+                >
+                  {data[i][0].emoji}
+                </span>
+              </>
+            );
+          })}
+        </div>
+        <div className="icon-palette">
+          {data[selectedTray].map((i) => {
+            //   console.log(i, i.emoji);
+            return <span className="emoticon-display"> {i.emoji} </span>;
+          })}
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default EmojiPick;
