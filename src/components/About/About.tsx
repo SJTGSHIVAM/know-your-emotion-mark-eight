@@ -1,21 +1,30 @@
 import "./About.css";
 const About = () => {
   return (
-    <div className="bcard">
+    <div className="bcard bg">
       <header className="head">
-        <h1>Is your Bday lucky?</h1>
+        <h1>About</h1>
       </header>
       <section className="about">
-        This is a simple app create using Typescript and ReactJS Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Beatae iste expedita
-        debitis perspiciatis! Quos, expedita numquam. Delectus, corporis natus
-        similique facere at minima, officia eum dolore tenetur est maxime quam
-        voluptates! Laborum itaque amet quod vero odit ea voluptates officia vel
-        voluptatem, fugiat ratione rem nihil labore odio nobis deleniti iste
-        facilis nam repudiandae. Facilis quod dolore ab deleniti, debitis esse
-        repudiandae obcaecati adipisci suscipit excepturi, nesciunt architecto
-        delectus voluptatum ipsa itaque explicabo ullam quae sapiente quam,
-        inventore reprehenderit ea?
+        <h2 id="description">Description</h2>
+        <p>
+          This is a web app that translates emojies to thier meaning. Built
+          using ReactJS.
+        </p>
+        <h2 id="live-link">Github Link</h2>
+        <p>
+          <a href="https://github.com/SJTGSHIVAM/know-your-emotion-mark-eight">
+            https://github.com/SJTGSHIVAM/know-your-emotion-mark-eight
+          </a>
+        </p>
+        <h2 id="salient-features-are">Salient features are</h2>
+        <ul>
+          <li>Built using ReactJS.</li>
+          <li>Have more than 10 emojis.(json data from 3rd party is used)</li>
+          <li>Display name of emoji on click</li>
+          <li>Display name of emoji on search</li>
+          <li>Display a message emoji not available if npt found</li>
+        </ul>
       </section>
     </div>
   );

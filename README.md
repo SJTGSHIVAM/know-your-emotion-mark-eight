@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# Description
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a web app that translates emojies to thier meaning. Built using ReactJS.
+
+# Live Link
+
+https://knowyouremoticon.netlify.app
+
+# Salient features are
+
+- Built using ReactJS.
+- Have more than 10 emojis.(json data from 3rd party is used)
+- Display name of emoji on click
+- Display name of emoji on search
+- Display a message emoji not available if npt found
 
 ## Available Scripts
 

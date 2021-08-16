@@ -3,23 +3,54 @@
   margin: 0.1rem;
   padding: 0.1rem;
 }
+
 .icon-tray {
   background: rgba(256, 256, 256, 1);
+  background-color: yellow;
   margin: auto;
   text-align: center;
   border-radius: 10px;
   border: 1px solid black;
+  cursor: pointer;
 }
+
 .icon-palette {
   overflow-y: scroll;
   overflow-x: hidden;
+  cursor: pointer;
   height: 190px;
 }
+
 .highlight {
   background-color: #f5c6c2;
   border-radius: 10px;
   box-shadow: 5px 5px 13px 0px rgba(50, 50, 50, 0.39);
 }
+
 .max-width-220 {
   max-width: 220px;
+}
+@media (min-width: 600px) {
+  .icon-palette {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    cursor: pointer;
+    height: 390px;
+  }
+  .icon-tray {
+    background: rgba(256, 256, 256, 1);
+    background-color: yellow;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 2.2rem;
+  }
+  .emoticon-display {
+    font-size: 2rem;
+  }
+  .max-width-220 {
+    max-width: 420px;
+  }
 }

@@ -10,15 +10,17 @@ import EmojiTray from "./components/EmojiTray";
 
 function App() {
   return (
-    <BrowserRouter>
-      {" "}
-      <Navbar />
-      <Switch>
-        <Route path="/" component={EmojiTray} exact />
-        <Route path="/about" exact component={About} />
-      </Switch>
-      <Footer />
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        {" "}
+        <Navbar />
+        <Switch>
+          <Route path="/" component={EmojiTray} exact />
+          <Route path="/about" exact component={About} />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 

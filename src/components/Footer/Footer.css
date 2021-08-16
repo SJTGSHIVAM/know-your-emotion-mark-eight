@@ -1,0 +1,35 @@
+.footer {
+  padding: 1rem;
+  background-color: #fce717;
+  position: relative;
+  height: 15vh;
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.footerLink {
+  display: inline;
+  margin: 0.5rem;
+  padding: 1em;
+}
+
+.ul {
+  padding: 1rem;
+}
+
+.icon {
+  color: black;
+  font-size: 1.2rem;
+}
+
+.legacyText {
+  text-align: center;
+  bottom: 0;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    height: 10vh;
+  }
+}

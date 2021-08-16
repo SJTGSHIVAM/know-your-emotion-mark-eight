@@ -19,7 +19,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            EmojiDocs
+            <h1>EmojiDocs</h1>
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>

@@ -15,9 +15,10 @@ const EmojiTray = () => {
     <>
       <div className="bcard">
         <header className="head">
-          <h3>Select a Emoji from below or paste a emoji in Text Filed</h3>
+          <h2>Select a Emoji from below or paste a emoji in Text Filed</h2>
         </header>
         <input
+          className="input"
           type="text"
           onChange={(e: React.ChangeEvent<HTMLInputElement>): void => {
             setChosenEmoji(e.target.value.trim());
@@ -28,7 +29,7 @@ const EmojiTray = () => {
         {chosenEmoji && (
           <div>
             <span className="emoticon-display">{chosenEmoji}</span>
-            <div>
+            <div className="msg">
               {searchEmoji[chosenEmoji]
                 ? "This emoji represents " + searchEmoji[chosenEmoji].name + "."
                 : "This emoji is not available in the current collection."}
